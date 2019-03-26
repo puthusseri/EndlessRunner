@@ -283,6 +283,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 452909687}
+  - component: {fileID: 452909688}
   m_Layer: 0
   m_Name: TileManager
   m_TagString: Untagged
@@ -304,6 +305,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &452909688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452909686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd1e3e0cfa7ce34cb114c775ea44181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilePrefab:
+  - {fileID: 266755711663559615, guid: 5f82f065117235849972681ab1b26138, type: 3}
+  - {fileID: 7963454777578316857, guid: 1a180dbd415c5ee42bc56dbe801502bf, type: 3}
+  - {fileID: 1140988030333155924, guid: 0eb18c738f55c604cb478b135e0858f5, type: 3}
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,7 +446,7 @@ PrefabInstance:
     - target: {fileID: 8964103063984462091, guid: 4b9defb37a10ba04bbdae12c8d647e70,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -10.56
       objectReference: {fileID: 0}
     - target: {fileID: 8964103063984462091, guid: 4b9defb37a10ba04bbdae12c8d647e70,
         type: 3}
