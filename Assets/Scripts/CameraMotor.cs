@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿//The script was used for camera to follow thw player and to give animation using the camera
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,12 +12,12 @@ public class CameraMotor : MonoBehaviour
 
 	
 	private float trasition = 0.0f;
-	private float animationDuration = 2.0f;
+	private float animationDuration = 3.0f;
 	private Vector3 animationOffset = new Vector3(0,5,5);
     // Start is called before the first frame update
     void Start()
     {
-     lookAt = GameObject.FindGameObjectWithTag("Player").transform;   
+     lookAt = GameObject.FindGameObjectWithTag("Player").transform; //To find the player original position  
 	 startOffset = transform.position - lookAt.position;
 	}
 
@@ -33,8 +35,10 @@ public class CameraMotor : MonoBehaviour
 		{
 			//Animation at the start;
 			transform.position = Vector3.Lerp(moveVector + animationOffset , moveVector,trasition);
-			trasition += Time.deltaTime  * 1 / animationDuration;
+			trasition += Time.deltaTime  * 1 / animationDuration; 
+			
+			transform.LookAt(lookAt.position + Vector3.up);
 		}
-		//transform.position = moveVector;
+		
 	}
 }
