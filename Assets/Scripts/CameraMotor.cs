@@ -35,6 +35,6 @@ public class CameraMotor : MonoBehaviour
 			transform.position = Vector3.Lerp(moveVector + animationOffset , moveVector,trasition);
 			trasition += Time.deltaTime  * 1 / animationDuration;
 		}
-		transform.position = moveVector;
+		//transform.position = moveVector;
 	}
 }
