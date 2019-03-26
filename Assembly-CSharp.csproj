@@ -55,6 +55,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\CameraMotor.cs" />
      <Compile Include="Assets\Scripts\PlayerMoter.cs" />
+     <Compile Include="Assets\Scripts\TileManager.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>E:/EndlessRunner/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
