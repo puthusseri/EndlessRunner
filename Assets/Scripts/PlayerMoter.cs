@@ -19,8 +19,7 @@ public class PlayerMoter : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update(){
 		if(Time.time < animationDuration )
 		{//For animation time doesnot happenss enything
 	//Cannot move until the animation time ends
@@ -44,4 +43,10 @@ public class PlayerMoter : MonoBehaviour
 		moveVector.z = speed;
         controller.Move(moveVector * Time.deltaTime);
     }
+
+	public void SetSpeed(int modifier){
+		speed = 5.0f +modifier;
+	
+	}
 }
+
