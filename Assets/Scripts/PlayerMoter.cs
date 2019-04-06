@@ -9,17 +9,19 @@ public class PlayerMoter : MonoBehaviour
 	private Vector3 moveVector;
 	private float verticalVelocity = 0.0f;
 	private float gravity = 12.0f;
+	private bool isDead = false;
 	
 	private float animationDuration = 3.0f;
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start(){
         controller = GetComponent<CharacterController>();
 		
     }
 
     // Update is called once per frame
     void Update(){
+		if(isDead)
+			return;
 		if(Time.time < animationDuration )
 		{//For animation time doesnot happenss enything
 	//Cannot move until the animation time ends
@@ -48,5 +50,20 @@ public class PlayerMoter : MonoBehaviour
 		speed = 5.0f +modifier;
 	
 	}
+	//when a collition happens
+	
+	private void OnControllerColliderHit(ControllerColliderHit hit)
+	{
+		if(hit.point.z > transform.position.z + controller.radius)
+		{
+			Death();
+			
+		}
+	}
+	private void Death() {
+		isDead = true;
+		GetComponent<Score>().OnDeath();
+	}
+	
 }
 
