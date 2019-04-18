@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//This is for the movement of the player
+
 public class PlayerMoter : MonoBehaviour
 {
 	private CharacterController controller;
